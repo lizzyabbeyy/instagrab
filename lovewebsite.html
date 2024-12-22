@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Love Themed Website</title>
+    <style>
+        /* Body and background */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #ff7eb9, #ff65a3);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Animated heart */
+        .heart {
+            position: relative;
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transform: rotate(45deg);
+            animation: heartbeat 1.5s infinite;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: red;
+            top: -50px;
+        }
+
+        .heart::before {
+            left: 0;
+        }
+
+        .heart::after {
+            right: 0;
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1) rotate(45deg);
+            }
+            50% {
+                transform: scale(1.2) rotate(45deg);
+            }
+            100% {
+                transform: scale(1) rotate(45deg);
+            }
+        }
+
+        /* Text and content styling */
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: fadeIn 3s ease-out;
+        }
+
+        p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0;
+            animation: fadeInText 4s ease-out 1s forwards;
+        }
+
+        /* Button styling */
+        .button {
+            background-color: #ff4d88;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: white;
+            border-radius: 25px;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeInButton 5s ease-out 2s forwards;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #ff2a56;
+        }
+
+        /* Fade-in animation for text */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInButton {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <!-- Heart animation -->
+        <div class="heart"></div>
+
+        <h1>if you got sent this riyaan</h1>
+        <p>just know that i ship you and a special somebody heheh</p>
+        
+        <!-- Button to show message -->
+        <button class="button" onclick="alert('shh its aafrah! ❤️')">Click here to find out who</button>
+    </div>
+
+</body>
+</html>
